@@ -1,0 +1,12 @@
+PODS:
+  - MGBottomSheet (0.1.8)
+
+DEPENDENCIES:
+  - MGBottomSheet
+
+SPEC CHECKSUMS:
+  MGBottomSheet: b083f0e5e89abb2fde4b61f80b3d4c1dfc195bab
+
+PODFILE CHECKSUM: 26c18b53dfe0fc195f86a02a3e9d3daafbaac627
+
+COCOAPODS: 1.1.1

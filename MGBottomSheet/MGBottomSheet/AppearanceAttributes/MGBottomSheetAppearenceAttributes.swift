@@ -10,11 +10,11 @@ import UIKit
 
 public class MGBottomSheetAppearanceAttributes: NSObject {
     
-    var sectionFont = UIFont()
-    var textFont = UIFont()
-    var sectionColor = UIColor()
-    var textColor = UIColor()
-    var imageTint = UIColor()
+    public var sectionFont = UIFont()
+    public var textFont = UIFont()
+    public var sectionColor = UIColor()
+    public var textColor = UIColor()
+    public var imageTint = UIColor()
         
     public class func configureDefaultTextStyle() -> MGBottomSheetAppearanceAttributes {
         let appearanceAttributes = MGBottomSheetAppearanceAttributes()

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MGBottomSheet
 
 class ViewController: UIViewController {
 
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
         
         let mgBottonSheet = MGBottomSheet.mgBottomSheetWithTitle("Actions")
         
-        //mgBottonSheet.appearance?.textFont = UIFont(name: "AvenirNext-Bold", size: 18)!
+        mgBottonSheet.appearance.
         
         let deleteAction = ActionSheet.actionWithTitle("DELETE", imageIcon: UIImage(named: "FavouriteFilled")!) {
             self.callback()
