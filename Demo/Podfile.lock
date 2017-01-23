@@ -1,11 +1,11 @@
 PODS:
-  - MGBottomSheet (0.1.8)
+  - MGBottomSheet (0.1.9)
 
 DEPENDENCIES:
   - MGBottomSheet
 
 SPEC CHECKSUMS:
-  MGBottomSheet: b083f0e5e89abb2fde4b61f80b3d4c1dfc195bab
+  MGBottomSheet: eb92a865a9990dc9b8162c83a7da2ee3e64b8fa7
 
 PODFILE CHECKSUM: 26c18b53dfe0fc195f86a02a3e9d3daafbaac627
 

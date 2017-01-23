@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         
         let mgBottonSheet = MGBottomSheet.mgBottomSheetWithTitle("Actions")
         
-        mgBottonSheet.appearance.
+        mgBottonSheet.appearance?.imageTint = UIColor.yellow
         
         let deleteAction = ActionSheet.actionWithTitle("DELETE", imageIcon: UIImage(named: "FavouriteFilled")!) {
             self.callback()

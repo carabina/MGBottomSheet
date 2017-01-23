@@ -27,8 +27,20 @@ public class MGBottomSheet: UIViewController  {
     fileprivate var titlePanel: String?
     public var appearance: MGBottomSheetAppearanceAttributes?
     
+    fileprivate static var bundle:Bundle {
+        let podBundle = Bundle(for: MGBottomSheet.self)
+        let bundleURL = podBundle.url(forResource: "MGBottomSheet", withExtension: "bundle")
+        return Bundle(url: bundleURL!)!
+    }
+    
+    fileprivate class func getBundleForResourceName(_ resourceName: String) -> Bundle {
+        let podBundle = Bundle(for: MGBottomSheet.self)
+        let bundleURL = podBundle.url(forResource: resourceName, withExtension: "bundle")
+        return Bundle(url: bundleURL!)!
+    }
+    
     public class func mgBottomSheetWithTitle(_ title: String?) -> MGBottomSheet {
-        let bundle = Bundle(for: MGBottomSheet.self)
+        let bundle = MGBottomSheet.getBundleForResourceName("MGBottomSheet")
         let view = MGBottomSheet(nibName: "MGBottomSheet", bundle: bundle)
 
         view.titlePanel = title
@@ -116,7 +128,7 @@ public class MGBottomSheet: UIViewController  {
     //MARK: - Private Methods
     
     fileprivate func registerCellsForCollectionView() {
-        let bundle = Bundle(for: MGBottomSheet.self)
+        let bundle = MGBottomSheet.getBundleForResourceName("ActionSheetCell")
         self.collectionView.register(UINib.init(nibName: "ActionSheetCell", bundle: bundle), forCellWithReuseIdentifier: kActionSheetCellIdentifier)
     }
     
