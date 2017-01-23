@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
               MGBottomSheet lets a user create a bottom sheet for select actions with material appearance.
               DESC
   s.requires_arc = true
-  s.version = '0.1.9'
+  s.version = '0.2.0'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.author = { 'Guillermo Garcia Rebolo' => 'guillermogarcia_18@hotmail.com' }
   s.homepage = 'https://github.com/guille969/MGBottomSheet'
