@@ -33,14 +33,7 @@ public class MGBottomSheet: UIViewController  {
         return Bundle(url: bundleURL!)!
     }
     
-    fileprivate class func getBundleForResourceName(_ resourceName: String) -> Bundle {
-        let podBundle = Bundle(for: MGBottomSheet.self)
-        let bundleURL = podBundle.url(forResource: resourceName, withExtension: "bundle")
-        return Bundle(url: bundleURL!)!
-    }
-    
     public class func mgBottomSheetWithTitle(_ title: String?) -> MGBottomSheet {
-        let bundle = MGBottomSheet.getBundleForResourceName("MGBottomSheet")
         let view = MGBottomSheet(nibName: "MGBottomSheet", bundle: bundle)
 
         view.titlePanel = title
@@ -128,8 +121,7 @@ public class MGBottomSheet: UIViewController  {
     //MARK: - Private Methods
     
     fileprivate func registerCellsForCollectionView() {
-        let bundle = MGBottomSheet.getBundleForResourceName("ActionSheetCell")
-        self.collectionView.register(UINib.init(nibName: "ActionSheetCell", bundle: bundle), forCellWithReuseIdentifier: kActionSheetCellIdentifier)
+        self.collectionView.register(UINib(nibName: "ActionSheetCell", bundle: MGBottomSheet.bundle), forCellWithReuseIdentifier: kActionSheetCellIdentifier)
     }
     
     fileprivate func resizeViewForNumberOfActions(_ numberActions: Int) {
